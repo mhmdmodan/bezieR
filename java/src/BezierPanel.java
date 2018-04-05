@@ -7,7 +7,8 @@ import java.util.List;
 public class BezierPanel extends JPanel {
     private List<BezierPoint> points = new ArrayList<>();
     private BezierPoint currentPoint;
-    private boolean distLock, lock, completed, canComplete, canDelete;
+    private boolean distLock, lock, completed, canDelete;
+    private int canComplete;
     public static final Color BEZ_PT_COL = Color.blue;
     public static final Color BEZ_LINE_COL = Color.black;
 
@@ -15,7 +16,7 @@ public class BezierPanel extends JPanel {
         completed = false;
         distLock = true;
         lock = true;
-        canComplete = false;
+        canComplete = 0;
         canDelete = false;
         addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
@@ -26,8 +27,9 @@ public class BezierPanel extends JPanel {
                             repaint();
                             return;
                         }
-                        if (canComplete && points.get(i) == points.get(0)) {
-                            completed = true;
+                        if (points.get(i) == points.get(0)) {
+                            canComplete++;
+                            if (canComplete > 1) completed = true;
                         }
                         distLock = false;
                         currentPoint = points.get(i);
@@ -35,6 +37,7 @@ public class BezierPanel extends JPanel {
                         return;
                     }
                 }
+                canComplete = 0;
                 if (completed) return;
                 distLock = true;
                 lock = true;
@@ -51,6 +54,7 @@ public class BezierPanel extends JPanel {
         addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseDragged(MouseEvent e) {
                 if (currentPoint != null) {
+                    System.out.println(points.toString());
                     currentPoint.moveMe(e.getPoint(), lock, distLock);
                     repaint();
                 }
@@ -60,14 +64,12 @@ public class BezierPanel extends JPanel {
             @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == 17) lock = false;
-                if (e.getKeyCode() == 16) canComplete = true;
                 if (e.getKeyCode() == 18) canDelete = true;
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
                 if (e.getKeyCode() == 17) lock = true;
-                if (e.getKeyCode() == 16) canComplete = false;
                 if (e.getKeyCode() == 18) canDelete = false;
             }
         });

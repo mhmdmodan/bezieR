@@ -2,10 +2,9 @@ import javax.swing.*;
 
 public class BezierDraw {
     public void drawer() {
-        JFrame f = new JFrame("Draw a Red Line");
-        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        JFrame f = new JFrame("Draw your curves");
         f.setSize(800, 800);
-        f.setLocation(300, 300);
+        f.setLocation(100, 100);
         f.setResizable(false);
         JPanel p = new BezierPanel();
         f.add(p);

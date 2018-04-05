@@ -31,6 +31,12 @@ draw.beziers <- function(x1, x2, x3, x4, y1, y2, y3, y4, npts = 10,new = TRUE, .
     invisible(list(x = xpts, y = ypts))
 }
 
-draw_curve <- function(T, npts = 100, ...) {
+plot_curve <- function(T, npts = 100, ...) {
     draw.beziers(T[, 1], T[, 3], T[, 5], T[, 7], T[, 2],T[, 4], T[, 6], T[, 8],npts=npts,xlab="",ylab="")
+}
+
+draw_beziers <- function(window_size = 800) {
+    class_name <- J("BezierDraw")
+    drawer <- new(class_name)
+    .jcall(drawer, "V", "drawer")
 }

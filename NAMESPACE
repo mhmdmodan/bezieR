@@ -1,2 +1,3 @@
 import("rJava")
-export("draw_curve")
+export("plot_curve")
+export("draw_beziers")
