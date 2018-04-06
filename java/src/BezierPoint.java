@@ -117,4 +117,17 @@ public class BezierPoint extends Point {
                 ", y=" + y +
                 '}';
     }
+
+    @Override
+    public BezierPoint clone() {
+        BezierPoint toReturn = new BezierPoint();
+        toReturn.x = this.x;
+        toReturn.y = this.y;
+        toReturn.fx = this.fx;
+        toReturn.fy = this.fy;
+        toReturn.bx = this.bx;
+        toReturn.by = this.by;
+        toReturn.currentPt = this.currentPt;
+        return toReturn;
+    }
 }

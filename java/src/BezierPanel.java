@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class BezierPanel extends JPanel {
@@ -11,6 +13,10 @@ public class BezierPanel extends JPanel {
     private int canComplete;
     public static final Color BEZ_PT_COL = Color.blue;
     public static final Color BEZ_LINE_COL = Color.black;
+    public static final int maxHistory = 200;
+
+    private Deque<List<BezierPoint>> history = new ArrayDeque<>();
+    private Deque<Boolean> completedHistory = new ArrayDeque<>();
 
     public BezierPanel() {
         completed = false;
@@ -20,6 +26,7 @@ public class BezierPanel extends JPanel {
         canDelete = false;
         addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
+                appendHistory();
                 for (int i = 0; i < points.size(); i++) {
                     if (points.get(i).clickedOn(e.getPoint(), lock)) {
                         if (canDelete) {
@@ -54,7 +61,6 @@ public class BezierPanel extends JPanel {
         addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseDragged(MouseEvent e) {
                 if (currentPoint != null) {
-                    System.out.println(points.toString());
                     currentPoint.moveMe(e.getPoint(), lock, distLock);
                     repaint();
                 }
@@ -65,6 +71,11 @@ public class BezierPanel extends JPanel {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == 17) lock = false;
                 if (e.getKeyCode() == 18) canDelete = true;
+                if (e.getKeyCode() == 90 && !lock && !history.isEmpty()) {
+                    points = history.pop();
+                    completed = completedHistory.pop();
+                    repaint();
+                }
             }
 
             @Override
@@ -75,6 +86,17 @@ public class BezierPanel extends JPanel {
         });
         setFocusable(true);
         requestFocusInWindow();
+    }
+
+    private void appendHistory() {
+        List<BezierPoint> pointsClone = new ArrayList<>(points.size());
+        for (BezierPoint point: points) pointsClone.add(point.clone());
+        history.push(pointsClone);
+        completedHistory.push(completed);
+        if (history.size() > maxHistory) {
+            history.pollLast();
+            completedHistory.pollLast();
+        }
     }
 
     public void paint(Graphics g) {
