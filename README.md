@@ -1,7 +1,7 @@
 # bezieR
 ### Easily draw bezier curves and import them into R
 
-![bezieR editor](https://mhmdmodan.com/imgs/bezier.png)
+![bezieR editor](https://mhmdmodan.com/imgs/bezier.PNG)
 
 ## Installation:
 
