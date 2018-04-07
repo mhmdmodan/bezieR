@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
+import java.util.*;
 import java.util.List;
 
 public class BezierPanel extends JPanel {
@@ -105,5 +103,36 @@ public class BezierPanel extends JPanel {
         for (BezierPoint point:points) point.draw(g);
         g.setColor(BEZ_LINE_COL);
         CurveDrawer.draw(points, g, completed);
+    }
+
+    public double[][] getPoints() {
+        double[][] toReturn;
+        if (completed) {
+            toReturn = new double[points.size()][8];
+        } else {
+            toReturn = new double[points.size()-1][8];
+        }
+        for (int i=1; i < points.size(); i++) {
+            toReturn[i-1] = new double[] {points.get(i-1).x,
+                    points.get(i-1).y,
+                    points.get(i-1).fx,
+                    points.get(i-1).fy,
+                    points.get(i).bx,
+                    points.get(i).by,
+                    points.get(i).x,
+                    points.get(i).y};
+        }
+        if (completed) {
+            int last = points.size()-1;
+            toReturn[points.size()-1] = new double[] {points.get(last).x,
+                    points.get(last).y,
+                    points.get(last).fx,
+                    points.get(last).fy,
+                    points.get(0).bx,
+                    points.get(0).by,
+                    points.get(0).x,
+                    points.get(0).y};
+        }
+        return toReturn;
     }
 }
