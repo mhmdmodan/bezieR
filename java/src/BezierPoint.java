@@ -1,10 +1,12 @@
 import java.awt.*;
+import java.io.Serializable;
 
-public class BezierPoint extends Point {
+public class BezierPoint extends Point implements Serializable {
     public int fx, fy, bx, by;
     public static final int DIAMETER = 8;
     public static final int BUFFER = 16;
     private int currentPt;
+    private static final long serialVersionUID = 1L;
 
     public BezierPoint(Point p) {
         super(p);
@@ -13,16 +15,6 @@ public class BezierPoint extends Point {
         bx = p.x;
         by = p.y;
         currentPt = 3;
-    }
-
-    public BezierPoint(double x,
-                       double y,
-                       double fx,
-                       double fy,
-                       double bx,
-                       double by,
-                       int frameSize) {
-
     }
 
     public BezierPoint() {

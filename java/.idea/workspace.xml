@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f59af9fd-0ebb-45f8-b642-8c1759bd62df" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/BezierPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BezierPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BezierPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BezierPoint.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,11 +31,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BezierPanel.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="BezierPanel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/BezierPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="23">
-                  <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+                <state relative-caret-position="491">
+                  <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -42,11 +43,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="BezierPoint.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="BezierPoint.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/BezierPoint.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+                <state relative-caret-position="211">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -58,8 +62,8 @@
           <file leaf-file-name="CurveDrawer.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/CurveDrawer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+                <state relative-caret-position="207">
+                  <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -71,7 +75,7 @@
             <entry file="file://$PROJECT_DIR$/src/BezierPoint.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2277">
-                  <caret line="109" selection-start-line="109" selection-end-line="109" />
+                  <caret line="101" selection-start-line="101" selection-end-line="101" />
                 </state>
               </provider>
             </entry>
@@ -87,8 +91,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/BezierDraw.java" />
-        <option value="$PROJECT_DIR$/src/BezierPanel.java" />
         <option value="$PROJECT_DIR$/src/BezierPoint.java" />
+        <option value="$PROJECT_DIR$/src/BezierPanel.java" />
       </list>
     </option>
   </component>
@@ -256,12 +260,12 @@
       <workItem from="1523076072738" duration="1293000" />
       <workItem from="1523078533780" duration="600000" />
       <workItem from="1523580150130" duration="920000" />
-      <workItem from="1523581336606" duration="1589000" />
+      <workItem from="1523581336606" duration="4344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19329000" />
+    <option name="totallyTimeSpent" value="22084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -269,6 +273,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3292011" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -295,7 +300,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3292011" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,25 +715,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BezierPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CurveDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/java.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BezierDraw.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -738,13 +725,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BezierPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="211">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CurveDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BezierPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

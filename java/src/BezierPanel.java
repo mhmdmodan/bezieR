@@ -1,6 +1,9 @@
+import javafx.util.Pair;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import java.util.*;
 import java.util.List;
 
@@ -74,6 +77,8 @@ public class BezierPanel extends JPanel {
                     completed = completedHistory.pop();
                     repaint();
                 }
+                if (e.getKeyCode() == 83) save();
+                if (e.getKeyCode() == 79) load();
             }
 
             @Override
@@ -134,5 +139,37 @@ public class BezierPanel extends JPanel {
                     frameSize - points.get(0).y};
         }
         return toReturn;
+    }
+
+    public void save() {
+        try {
+            FileOutputStream fos = new FileOutputStream("points.ser");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            Pair<Boolean, List<BezierPoint>> pair = new Pair<>(completed, points);
+            oos.writeObject(pair);
+            oos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load() {
+        try {
+            FileInputStream fis = new FileInputStream("points.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            Pair<Boolean, List<BezierPoint>> pair = (Pair<Boolean, List<BezierPoint>>) ois.readObject();
+            points = pair.getValue();
+            completed = pair.getKey();
+            ois.close();
+            repaint();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
