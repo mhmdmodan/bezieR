@@ -7,8 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f59af9fd-0ebb-45f8-b642-8c1759bd62df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/BezierPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BezierPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BezierPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BezierPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../inst/java/java.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../inst/java/java.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/points.ser" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +35,8 @@
           <file leaf-file-name="BezierPanel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/BezierPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="491">
-                  <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+                <state relative-caret-position="261">
+                  <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -260,12 +261,12 @@
       <workItem from="1523076072738" duration="1293000" />
       <workItem from="1523078533780" duration="600000" />
       <workItem from="1523580150130" duration="920000" />
-      <workItem from="1523581336606" duration="4344000" />
+      <workItem from="1523581336606" duration="4885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22084000" />
+    <option name="totallyTimeSpent" value="22625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -281,7 +282,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.3292011" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.3292011" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -747,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BezierPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+        <state relative-caret-position="261">
+          <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
