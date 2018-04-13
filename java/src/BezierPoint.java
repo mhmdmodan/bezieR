@@ -15,6 +15,16 @@ public class BezierPoint extends Point {
         currentPt = 3;
     }
 
+    public BezierPoint(double x,
+                       double y,
+                       double fx,
+                       double fy,
+                       double bx,
+                       double by,
+                       int frameSize) {
+
+    }
+
     public BezierPoint() {
         this(new Point(0,0));
     }
