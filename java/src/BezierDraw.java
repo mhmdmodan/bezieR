@@ -20,7 +20,7 @@ public class BezierDraw {
     }
 
     public double[][] getPoints() {
-        return p.getPoints();
+        return p.getPoints(frameSize);
     }
 
     public static void main(String[] args) {
