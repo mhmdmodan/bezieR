@@ -10,9 +10,9 @@ import java.util.List;
 public class BezierPanel extends JPanel {
     private List<BezierPoint> points = new ArrayList<>();
     private BezierPoint currentPoint;
-    private boolean distLock, lock, completed, canDelete;
+    private boolean distLock, lock, completed, canDelete, hidden;
     private int canComplete;
-    public static final Color BEZ_PT_COL = Color.blue;
+    public static final Color BEZ_PT_COL = new Color(244,122,0);
     public static final Color BEZ_LINE_COL = Color.black;
     public static final int maxHistory = 200;
 
@@ -20,6 +20,7 @@ public class BezierPanel extends JPanel {
     private Deque<Boolean> completedHistory = new ArrayDeque<>();
 
     public BezierPanel() {
+        hidden = false;
         completed = false;
         distLock = true;
         lock = true;
@@ -79,6 +80,10 @@ public class BezierPanel extends JPanel {
                 }
                 if (e.getKeyCode() == 83) save();
                 if (e.getKeyCode() == 79) load();
+                if (e.getKeyCode() == 72) {
+                    hidden = !hidden;
+                    repaint();
+                }
             }
 
             @Override
@@ -105,7 +110,7 @@ public class BezierPanel extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         g.setColor(BEZ_PT_COL);
-        for (BezierPoint point:points) point.draw(g);
+        if (!hidden) for (BezierPoint point:points) point.draw(g);
         g.setColor(BEZ_LINE_COL);
         CurveDrawer.draw(points, g, completed);
     }

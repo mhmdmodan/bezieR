@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class BezierDraw {
     private int frameSize;
@@ -15,6 +16,7 @@ public class BezierDraw {
         f.setLocation(100, 100);
         f.setResizable(false);
         p = new BezierPanel();
+        p.setBackground(Color.white);
         f.add(p);
         f.setVisible(true);
     }
