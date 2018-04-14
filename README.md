@@ -45,3 +45,5 @@ Double click the first handle to complete the curve.
 Control-Z is undo. There is no redo.
 
 Press "s" to save the current state in a file called "points.set", press "o" to load
+
+Press "h" to toggle hiding the orange bezier controls
